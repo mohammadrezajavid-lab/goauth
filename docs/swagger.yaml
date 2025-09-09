@@ -1,0 +1,235 @@
+basePath: /v1
+definitions:
+  goauth.GenerateOTPRequest:
+    properties:
+      phone_number:
+        type: string
+    type: object
+  goauth.ListUsersResponse:
+    properties:
+      metadata:
+        $ref: '#/definitions/goauth.PaginationMetadata'
+      users:
+        items:
+          $ref: '#/definitions/goauth.User'
+        type: array
+    type: object
+  goauth.PaginationMetadata:
+    properties:
+      currentPage:
+        type: integer
+      pageSize:
+        type: integer
+      totalPages:
+        type: integer
+      totalRecords:
+        type: integer
+    type: object
+  goauth.User:
+    properties:
+      created_at:
+        type: string
+      id:
+        type: integer
+      phone_number:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  goauth.VerifyOTPRequest:
+    properties:
+      otp:
+        type: string
+      phone_number:
+        type: string
+    type: object
+  goauth.VerifyOTPResponse:
+    properties:
+      is_new:
+        description: A flag to indicate if the user was just registered.
+        type: boolean
+      token:
+        type: string
+    type: object
+host: localhost:8080
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  description: This is a sample server for OTP-based authentication.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: GoAuth Service API
+  version: "1.0"
+paths:
+  /auth/generateotp:
+    post:
+      consumes:
+      - application/json
+      description: Generates a one-time password for a given phone number.
+      parameters:
+      - description: Phone Number
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/goauth.GenerateOTPRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 'message: OTP code generated successfully'
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "400":
+          description: Validation failed or bad request
+          schema:
+            additionalProperties: true
+            type: object
+        "422":
+          description: Invalid phone number format
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: Internal server error
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Generate OTP
+      tags:
+      - auth
+  /auth/verify:
+    post:
+      consumes:
+      - application/json
+      description: Verifies an OTP and returns a JWT token for the user. Registers
+        the user if they don't exist.
+      parameters:
+      - description: Phone Number and OTP
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/goauth.VerifyOTPRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/goauth.VerifyOTPResponse'
+        "400":
+          description: Validation failed or bad request
+          schema:
+            additionalProperties: true
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            additionalProperties: true
+            type: object
+        "422":
+          description: Invalid phone number format
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: Internal server error
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Verify OTP and Login/Register
+      tags:
+      - auth
+  /users:
+    get:
+      consumes:
+      - application/json
+      description: Retrieves a paginated list of users with search functionality.
+      parameters:
+      - default: 1
+        description: Page number
+        in: query
+        name: page
+        type: integer
+      - default: 10
+        description: Number of items per page
+        in: query
+        name: pageSize
+        type: integer
+      - description: Search term for phone number
+        in: query
+        name: search
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/goauth.ListUsersResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: Internal server error
+          schema:
+            additionalProperties: true
+            type: object
+      security:
+      - ApiKeyAuth: []
+      summary: List Users
+      tags:
+      - users
+  /users/{id}:
+    get:
+      consumes:
+      - application/json
+      description: Retrieves details for a single user by their ID.
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/goauth.User'
+        "400":
+          description: Invalid user ID format
+          schema:
+            additionalProperties: true
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            additionalProperties: true
+            type: object
+        "404":
+          description: User not found
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: Internal server error
+          schema:
+            additionalProperties: true
+            type: object
+      security:
+      - ApiKeyAuth: []
+      summary: Get User by ID
+      tags:
+      - users
+swagger: "2.0"

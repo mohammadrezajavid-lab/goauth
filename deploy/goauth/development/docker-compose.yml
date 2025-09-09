@@ -1,0 +1,41 @@
+services:
+  app:
+    build:
+      context: ../../..
+      dockerfile: ./deploy/goauth/development/Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ../../../deploy/goauth/development/config.yml:/app/config.yml
+    environment:
+      - CONFIG_PATH=/app/config.yml
+      #`koanf:"postgres_db"` tag.
+      - AUTH_POSTGRES_DB__HOST=goauthapp-db
+    depends_on:
+      goauthapp-db:
+        condition: service_healthy
+    command: [ "/app/main", "serve", "--migrate-up" ]
+
+  goauthapp-db:
+    image: postgres:14-alpine
+    container_name: goauthapp-db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: auth_admin
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: auth_db
+    restart: always
+    volumes:
+      - goauthapp-data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U auth_admin -d auth_db" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+volumes:
+  goauthapp-data:
+    driver: local
+

@@ -1,0 +1,363 @@
+{"time":"2025-09-09T19:46:16.2838011+03:30","level":"INFO","msg":"Starting Auth Service..."}
+{"time":"2025-09-09T19:46:16.3347837+03:30","level":"INFO","msg":"Auth application started."}
+{"time":"2025-09-09T19:46:16.3347837+03:30","level":"INFO","msg":"HTTP server starting...","host":"","port":8080}
+{"time":"2025-09-09T19:51:55.6739687+03:30","level":"INFO","msg":"OTP generation requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T19:51:55.6739687+03:30","level":"INFO","msg":"OTP saved in memory","phone_number":"+989196551929"}
+{"time":"2025-09-09T19:54:16.3350077+03:30","level":"INFO","msg":"Cleaned up expired OTPs","count":1}
+{"time":"2025-09-09T19:55:21.6408724+03:30","level":"INFO","msg":"Login verification requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T19:55:21.6414202+03:30","level":"WARN","msg":"OTP not found in store","phone_number":"+989196551929"}
+{"time":"2025-09-09T19:55:21.6414202+03:30","level":"WARN","msg":"Failed to find OTP","phone_number":"+989196551929","error":"otp not found or expired"}
+{"time":"2025-09-09T19:59:44.804853+03:30","level":"INFO","msg":"Shutdown signal received..."}
+{"time":"2025-09-09T19:59:44.804853+03:30","level":"INFO","msg":"Starting server shutdown process..."}
+{"time":"2025-09-09T19:59:44.804853+03:30","level":"INFO","msg":"Starting graceful shutdown for HTTP server","port":8080}
+{"time":"2025-09-09T19:59:44.804853+03:30","level":"INFO","msg":"HTTP server stopped","host":"","port":8080}
+{"time":"2025-09-09T19:59:44.8053893+03:30","level":"INFO","msg":"HTTP server shutdown successfully"}
+{"time":"2025-09-09T19:59:44.8053893+03:30","level":"INFO","msg":"Servers shutdown gracefully"}
+{"time":"2025-09-09T19:59:44.8053893+03:30","level":"INFO","msg":"Auth Application stopped"}
+{"time":"2025-09-09T19:59:44.8053893+03:30","level":"INFO","msg":"Auth service started"}
+{"time":"2025-09-09T19:59:44.8053893+03:30","level":"INFO","msg":"All servers have been shutdown successfully."}
+{"time":"2025-09-09T20:00:05.20088+03:30","level":"INFO","msg":"Starting Auth Service..."}
+{"time":"2025-09-09T20:00:05.2275041+03:30","level":"INFO","msg":"Auth application started."}
+{"time":"2025-09-09T20:00:05.2275041+03:30","level":"INFO","msg":"HTTP server starting...","host":"","port":8080}
+{"time":"2025-09-09T20:00:24.711299+03:30","level":"INFO","msg":"OTP generation requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T20:00:24.7118578+03:30","level":"INFO","msg":"OTP saved in memory","phone_number":"+989196551929"}
+{"time":"2025-09-09T20:00:48.0664945+03:30","level":"INFO","msg":"Login verification requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T20:00:48.0675071+03:30","level":"INFO","msg":"OTP found successfully","phone_number":"+989196551929"}
+{"time":"2025-09-09T20:00:48.0675071+03:30","level":"INFO","msg":"OTP verified successfully, checking user status","phone_number":"+989196551929"}
+{"time":"2025-09-09T20:00:48.0675071+03:30","level":"INFO","msg":"Finding user by phone number","phone_number":"+989196551929"}
+{"time":"2025-09-09T20:00:48.0675071+03:30","level":"WARN","msg":"FindByPhoneNumber is not implemented, returning not found error","phone_number":"+989196551929"}
+{"time":"2025-09-09T20:00:48.0675071+03:30","level":"INFO","msg":"User not found, proceeding with registration","phone_number":"+989196551929"}
+{"time":"2025-09-09T20:00:48.0675071+03:30","level":"INFO","msg":"Creating a new user","phone_number":"+989196551929"}
+{"time":"2025-09-09T20:00:48.0675071+03:30","level":"INFO","msg":"User created successfully (mock implementation)","phone_number":"+989196551929"}
+{"time":"2025-09-09T20:00:48.0675071+03:30","level":"INFO","msg":"Finding user by phone number","phone_number":"+989196551929"}
+{"time":"2025-09-09T20:00:48.0675071+03:30","level":"WARN","msg":"FindByPhoneNumber is not implemented, returning not found error","phone_number":"+989196551929"}
+{"time":"2025-09-09T20:00:48.0675071+03:30","level":"ERROR","msg":"Failed to fetch newly created user","phone_number":"+989196551929","error":"user not found"}
+{"time":"2025-09-09T20:01:23.9629127+03:30","level":"INFO","msg":"Shutdown signal received..."}
+{"time":"2025-09-09T20:01:23.9629127+03:30","level":"INFO","msg":"Starting server shutdown process..."}
+{"time":"2025-09-09T20:01:23.9635736+03:30","level":"INFO","msg":"Starting graceful shutdown for HTTP server","port":8080}
+{"time":"2025-09-09T20:01:23.9636232+03:30","level":"INFO","msg":"HTTP server stopped","host":"","port":8080}
+{"time":"2025-09-09T20:01:23.9642993+03:30","level":"INFO","msg":"HTTP server shutdown successfully"}
+{"time":"2025-09-09T20:01:23.9642993+03:30","level":"INFO","msg":"All servers have been shutdown successfully."}
+{"time":"2025-09-09T20:01:23.9642993+03:30","level":"INFO","msg":"Servers shutdown gracefully"}
+{"time":"2025-09-09T20:01:23.9642993+03:30","level":"INFO","msg":"Auth Application stopped"}
+{"time":"2025-09-09T20:01:23.9642993+03:30","level":"INFO","msg":"Auth service started"}
+{"time":"2025-09-09T20:32:03.5648549+03:30","level":"INFO","msg":"Running migrations up..."}
+{"time":"2025-09-09T20:34:46.3671408+03:30","level":"INFO","msg":"Running migrations up..."}
+{"time":"2025-09-09T20:36:36.8061023+03:30","level":"INFO","msg":"Running migrations up..."}
+{"time":"2025-09-09T20:36:36.8864195+03:30","level":"INFO","msg":"Migrations up completed."}
+{"time":"2025-09-09T20:36:36.8864195+03:30","level":"INFO","msg":"Starting Auth Service..."}
+{"time":"2025-09-09T20:36:36.9149877+03:30","level":"INFO","msg":"Auth application started."}
+{"time":"2025-09-09T20:36:36.9149877+03:30","level":"INFO","msg":"HTTP server starting...","host":"","port":8080}
+{"time":"2025-09-09T20:36:58.4690182+03:30","level":"INFO","msg":"OTP generation requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T20:36:58.4690182+03:30","level":"INFO","msg":"OTP saved in memory","phone_number":"+989196551929"}
+{"time":"2025-09-09T20:37:23.4681354+03:30","level":"INFO","msg":"Login verification requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T20:37:23.4681354+03:30","level":"INFO","msg":"OTP found successfully","phone_number":"+989196551929"}
+{"time":"2025-09-09T20:37:23.4681354+03:30","level":"INFO","msg":"OTP verified successfully, checking user status","phone_number":"+989196551929"}
+{"time":"2025-09-09T20:37:23.4681354+03:30","level":"INFO","msg":"Finding user by phone number in database","phone_number":"+989196551929"}
+{"time":"2025-09-09T20:37:23.4915233+03:30","level":"WARN","msg":"User not found in database","phone_number":"+989196551929"}
+{"time":"2025-09-09T20:37:23.4915233+03:30","level":"INFO","msg":"User not found, proceeding with registration","phone_number":"+989196551929"}
+{"time":"2025-09-09T20:37:23.4915233+03:30","level":"INFO","msg":"Creating a new user in the database","phone_number":"+989196551929"}
+{"time":"2025-09-09T20:37:23.5096321+03:30","level":"INFO","msg":"User created successfully","phone_number":"+989196551929","user_id":1}
+{"time":"2025-09-09T20:37:23.5096321+03:30","level":"INFO","msg":"Finding user by phone number in database","phone_number":"+989196551929"}
+{"time":"2025-09-09T20:37:23.5112518+03:30","level":"INFO","msg":"User found successfully","phone_number":"+989196551929"}
+{"time":"2025-09-09T20:37:23.5112743+03:30","level":"INFO","msg":"JWT token generated for user","phone_number":"+989196551929","user_id":1}
+{"time":"2025-09-09T20:37:59.9862065+03:30","level":"INFO","msg":"Shutdown signal received..."}
+{"time":"2025-09-09T20:37:59.9862065+03:30","level":"INFO","msg":"Starting server shutdown process..."}
+{"time":"2025-09-09T20:37:59.9862065+03:30","level":"INFO","msg":"Starting graceful shutdown for HTTP server","port":8080}
+{"time":"2025-09-09T20:37:59.9867887+03:30","level":"INFO","msg":"HTTP server stopped","host":"","port":8080}
+{"time":"2025-09-09T20:37:59.9867887+03:30","level":"INFO","msg":"HTTP server shutdown successfully"}
+{"time":"2025-09-09T20:37:59.9867887+03:30","level":"INFO","msg":"All servers have been shutdown successfully."}
+{"time":"2025-09-09T20:37:59.9867887+03:30","level":"INFO","msg":"Servers shutdown gracefully"}
+{"time":"2025-09-09T20:37:59.9867887+03:30","level":"INFO","msg":"Auth Application stopped"}
+{"time":"2025-09-09T20:37:59.987297+03:30","level":"INFO","msg":"Auth service started"}
+{"time":"2025-09-09T21:02:48.2305475+03:30","level":"INFO","msg":"Running migrations up..."}
+{"time":"2025-09-09T21:02:48.2540809+03:30","level":"INFO","msg":"Migrations up completed."}
+{"time":"2025-09-09T21:02:48.2540809+03:30","level":"INFO","msg":"Starting Auth Service..."}
+{"time":"2025-09-09T21:02:48.2853501+03:30","level":"INFO","msg":"Auth application started."}
+{"time":"2025-09-09T21:02:48.2853501+03:30","level":"INFO","msg":"HTTP server starting...","host":"","port":8080}
+{"time":"2025-09-09T21:04:19.784946+03:30","level":"INFO","msg":"Shutdown signal received..."}
+{"time":"2025-09-09T21:04:19.784946+03:30","level":"INFO","msg":"Starting server shutdown process..."}
+{"time":"2025-09-09T21:04:19.784946+03:30","level":"INFO","msg":"Starting graceful shutdown for HTTP server","port":8080}
+{"time":"2025-09-09T21:04:19.784946+03:30","level":"INFO","msg":"HTTP server stopped","host":"","port":8080}
+{"time":"2025-09-09T21:04:19.7855052+03:30","level":"INFO","msg":"HTTP server shutdown successfully"}
+{"time":"2025-09-09T21:04:19.7855052+03:30","level":"INFO","msg":"All servers have been shutdown successfully."}
+{"time":"2025-09-09T21:04:19.7855052+03:30","level":"INFO","msg":"Servers shutdown gracefully"}
+{"time":"2025-09-09T21:04:19.7855052+03:30","level":"INFO","msg":"Auth Application stopped"}
+{"time":"2025-09-09T21:04:19.7855052+03:30","level":"INFO","msg":"Auth service started"}
+{"time":"2025-09-09T21:18:12.6003906+03:30","level":"INFO","msg":"Running migrations up..."}
+{"time":"2025-09-09T21:18:12.6233206+03:30","level":"INFO","msg":"Migrations up completed."}
+{"time":"2025-09-09T21:18:12.6233206+03:30","level":"INFO","msg":"Starting Auth Service..."}
+{"time":"2025-09-09T21:18:12.6536547+03:30","level":"INFO","msg":"Auth application started."}
+{"time":"2025-09-09T21:18:12.6536547+03:30","level":"INFO","msg":"HTTP server starting...","host":"","port":8080}
+{"time":"2025-09-09T21:18:28.0971213+03:30","level":"INFO","msg":"OTP generation requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T21:18:28.0971213+03:30","level":"DEBUG","msg":"OTP saved in memory","phone_number":"+989196551929"}
+{"time":"2025-09-09T21:18:28.0971213+03:30","level":"INFO","msg":"OTP code generated successfully","phone_number":"+989196551929","otp_code":"095962"}
+{"time":"2025-09-09T21:18:50.5104398+03:30","level":"INFO","msg":"Login verification requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T21:18:50.5104398+03:30","level":"DEBUG","msg":"OTP found successfully","phone_number":"+989196551929"}
+{"time":"2025-09-09T21:18:50.5104398+03:30","level":"INFO","msg":"OTP verified successfully, checking user status","phone_number":"+989196551929"}
+{"time":"2025-09-09T21:18:50.5104398+03:30","level":"INFO","msg":"Finding user by phone number in database","phone_number":"+989196551929"}
+{"time":"2025-09-09T21:18:50.5246926+03:30","level":"DEBUG","msg":"User found successfully","phone_number":"+989196551929"}
+{"time":"2025-09-09T21:18:50.5246926+03:30","level":"DEBUG","msg":"Existing user found","phone_number":"+989196551929","phone_number":"+989196551929"}
+{"time":"2025-09-09T21:18:50.5246926+03:30","level":"DEBUG","msg":"JWT token generated for user","phone_number":"+989196551929","user_id":1}
+{"time":"2025-09-09T21:19:03.9340031+03:30","level":"INFO","msg":"Shutdown signal received..."}
+{"time":"2025-09-09T21:19:03.9340031+03:30","level":"INFO","msg":"Starting server shutdown process..."}
+{"time":"2025-09-09T21:19:03.9340031+03:30","level":"INFO","msg":"Starting graceful shutdown for HTTP server","port":8080}
+{"time":"2025-09-09T21:19:03.9340031+03:30","level":"INFO","msg":"HTTP server stopped","host":"","port":8080}
+{"time":"2025-09-09T21:19:03.9345962+03:30","level":"INFO","msg":"HTTP server shutdown successfully"}
+{"time":"2025-09-09T21:19:03.9345962+03:30","level":"INFO","msg":"All servers have been shutdown successfully."}
+{"time":"2025-09-09T21:19:03.9345962+03:30","level":"INFO","msg":"Servers shutdown gracefully"}
+{"time":"2025-09-09T21:19:03.9345962+03:30","level":"INFO","msg":"Auth Application stopped"}
+{"time":"2025-09-09T21:19:03.9345962+03:30","level":"INFO","msg":"Auth service started"}
+{"time":"2025-09-09T21:45:03.0159941+03:30","level":"INFO","msg":"Running migrations up..."}
+{"time":"2025-09-09T21:45:03.0417614+03:30","level":"INFO","msg":"Migrations up completed."}
+{"time":"2025-09-09T21:45:03.0417614+03:30","level":"INFO","msg":"Starting Auth Service..."}
+{"time":"2025-09-09T21:45:03.0796648+03:30","level":"INFO","msg":"Auth application started."}
+{"time":"2025-09-09T21:45:03.0796648+03:30","level":"INFO","msg":"HTTP server starting...","host":"","port":8080}
+{"time":"2025-09-09T21:45:15.5485491+03:30","level":"INFO","msg":"OTP generation requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T21:45:15.5485491+03:30","level":"DEBUG","msg":"OTP saved in memory","phone_number":"+989196551929"}
+{"time":"2025-09-09T21:45:15.5485491+03:30","level":"INFO","msg":"OTP code generated successfully","phone_number":"+989196551929","otp_code":"650224"}
+{"time":"2025-09-09T21:45:22.1775553+03:30","level":"INFO","msg":"OTP generation requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T21:45:22.1775553+03:30","level":"DEBUG","msg":"OTP saved in memory","phone_number":"+989196551929"}
+{"time":"2025-09-09T21:45:22.1775553+03:30","level":"INFO","msg":"OTP code generated successfully","phone_number":"+989196551929","otp_code":"432192"}
+{"time":"2025-09-09T21:45:27.3011183+03:30","level":"INFO","msg":"OTP generation requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T21:45:27.3011183+03:30","level":"DEBUG","msg":"OTP saved in memory","phone_number":"+989196551929"}
+{"time":"2025-09-09T21:45:27.3011183+03:30","level":"INFO","msg":"OTP code generated successfully","phone_number":"+989196551929","otp_code":"087256"}
+{"time":"2025-09-09T21:45:50.0279611+03:30","level":"INFO","msg":"Shutdown signal received..."}
+{"time":"2025-09-09T21:45:50.0279611+03:30","level":"INFO","msg":"Starting server shutdown process..."}
+{"time":"2025-09-09T21:45:50.0279611+03:30","level":"INFO","msg":"Starting graceful shutdown for HTTP server","port":8080}
+{"time":"2025-09-09T21:45:50.0279611+03:30","level":"INFO","msg":"HTTP server stopped","host":"","port":8080}
+{"time":"2025-09-09T21:45:50.0285057+03:30","level":"INFO","msg":"HTTP server shutdown successfully"}
+{"time":"2025-09-09T21:45:50.0285057+03:30","level":"INFO","msg":"All servers have been shutdown successfully."}
+{"time":"2025-09-09T21:45:50.0285057+03:30","level":"INFO","msg":"Servers shutdown gracefully"}
+{"time":"2025-09-09T21:45:50.0285057+03:30","level":"INFO","msg":"Auth Application stopped"}
+{"time":"2025-09-09T21:45:50.0285057+03:30","level":"INFO","msg":"Auth service started"}
+{"time":"2025-09-09T21:52:14.4456483+03:30","level":"INFO","msg":"Running migrations up..."}
+{"time":"2025-09-09T21:52:14.467251+03:30","level":"INFO","msg":"Migrations up completed."}
+{"time":"2025-09-09T21:52:14.467251+03:30","level":"INFO","msg":"Starting Auth Service..."}
+{"time":"2025-09-09T21:52:14.4995194+03:30","level":"INFO","msg":"Auth application started."}
+{"time":"2025-09-09T21:52:14.5000416+03:30","level":"INFO","msg":"HTTP server starting...","host":"","port":8080}
+{"time":"2025-09-09T21:52:22.8741889+03:30","level":"INFO","msg":"OTP generation requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T21:52:22.8742205+03:30","level":"DEBUG","msg":"OTP saved in memory","phone_number":"+989196551929"}
+{"time":"2025-09-09T21:52:22.8742205+03:30","level":"INFO","msg":"OTP code generated successfully","phone_number":"+989196551929","otp_code":"104036"}
+{"time":"2025-09-09T21:52:23.857057+03:30","level":"INFO","msg":"OTP generation requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T21:52:23.8575659+03:30","level":"DEBUG","msg":"OTP saved in memory","phone_number":"+989196551929"}
+{"time":"2025-09-09T21:52:23.8575659+03:30","level":"INFO","msg":"OTP code generated successfully","phone_number":"+989196551929","otp_code":"982051"}
+{"time":"2025-09-09T21:52:25.0420803+03:30","level":"INFO","msg":"OTP generation requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T21:52:25.0420803+03:30","level":"DEBUG","msg":"OTP saved in memory","phone_number":"+989196551929"}
+{"time":"2025-09-09T21:52:25.0420803+03:30","level":"INFO","msg":"OTP code generated successfully","phone_number":"+989196551929","otp_code":"460296"}
+{"time":"2025-09-09T21:52:35.7305423+03:30","level":"INFO","msg":"Shutdown signal received..."}
+{"time":"2025-09-09T21:52:35.7305423+03:30","level":"INFO","msg":"Starting server shutdown process..."}
+{"time":"2025-09-09T21:52:35.7305423+03:30","level":"INFO","msg":"Starting graceful shutdown for HTTP server","port":8080}
+{"time":"2025-09-09T21:52:35.7305423+03:30","level":"INFO","msg":"HTTP server stopped","host":"","port":8080}
+{"time":"2025-09-09T21:52:35.7310992+03:30","level":"INFO","msg":"HTTP server shutdown successfully"}
+{"time":"2025-09-09T21:52:35.7310992+03:30","level":"INFO","msg":"All servers have been shutdown successfully."}
+{"time":"2025-09-09T21:52:35.7310992+03:30","level":"INFO","msg":"Servers shutdown gracefully"}
+{"time":"2025-09-09T21:52:35.7310992+03:30","level":"INFO","msg":"Auth Application stopped"}
+{"time":"2025-09-09T21:52:35.7310992+03:30","level":"INFO","msg":"Auth service started"}
+{"time":"2025-09-09T22:26:58.200741+03:30","level":"INFO","msg":"Running migrations up..."}
+{"time":"2025-09-09T22:28:22.6717193+03:30","level":"INFO","msg":"Running migrations up..."}
+{"time":"2025-09-09T22:30:58.8009676+03:30","level":"INFO","msg":"Running migrations up..."}
+{"time":"2025-09-09T22:32:35.7780076+03:30","level":"INFO","msg":"Running migrations up..."}
+{"time":"2025-09-09T22:33:43.5874353+03:30","level":"INFO","msg":"Running migrations up..."}
+{"time":"2025-09-09T22:33:43.7951401+03:30","level":"INFO","msg":"Migrations up completed."}
+{"time":"2025-09-09T22:33:43.7951401+03:30","level":"INFO","msg":"Starting Auth Service..."}
+{"time":"2025-09-09T22:33:43.8311829+03:30","level":"INFO","msg":"Auth application started."}
+{"time":"2025-09-09T22:33:43.8311829+03:30","level":"INFO","msg":"HTTP server starting...","host":"","port":8080}
+{"time":"2025-09-09T22:33:50.2882507+03:30","level":"INFO","msg":"Shutdown signal received..."}
+{"time":"2025-09-09T22:33:50.2882507+03:30","level":"INFO","msg":"Starting server shutdown process..."}
+{"time":"2025-09-09T22:33:50.2882507+03:30","level":"INFO","msg":"Starting graceful shutdown for HTTP server","port":8080}
+{"time":"2025-09-09T22:33:50.2882507+03:30","level":"INFO","msg":"HTTP server stopped","host":"","port":8080}
+{"time":"2025-09-09T22:33:50.2887613+03:30","level":"INFO","msg":"HTTP server shutdown successfully"}
+{"time":"2025-09-09T22:33:50.2887992+03:30","level":"INFO","msg":"All servers have been shutdown successfully."}
+{"time":"2025-09-09T22:33:50.2887992+03:30","level":"INFO","msg":"Servers shutdown gracefully"}
+{"time":"2025-09-09T22:33:50.2887992+03:30","level":"INFO","msg":"Auth Application stopped"}
+{"time":"2025-09-09T22:33:50.2887992+03:30","level":"INFO","msg":"Auth service started"}
+{"time":"2025-09-09T22:34:24.1753055+03:30","level":"INFO","msg":"Running migrations up..."}
+{"time":"2025-09-09T22:34:24.1966486+03:30","level":"INFO","msg":"Migrations up completed."}
+{"time":"2025-09-09T22:34:24.1966486+03:30","level":"INFO","msg":"Starting Auth Service..."}
+{"time":"2025-09-09T22:34:24.2265871+03:30","level":"INFO","msg":"Auth application started."}
+{"time":"2025-09-09T22:34:24.2265871+03:30","level":"INFO","msg":"HTTP server starting...","host":"","port":8080}
+{"time":"2025-09-09T22:34:34.5140635+03:30","level":"INFO","msg":"OTP generation requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:34:34.5140635+03:30","level":"DEBUG","msg":"OTP saved in memory","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:34:34.5140635+03:30","level":"INFO","msg":"OTP code generated successfully","phone_number":"+989196551929","otp_code":"759545"}
+{"time":"2025-09-09T22:34:35.3584094+03:30","level":"INFO","msg":"OTP generation requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:34:35.3584094+03:30","level":"DEBUG","msg":"OTP saved in memory","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:34:35.3584094+03:30","level":"INFO","msg":"OTP code generated successfully","phone_number":"+989196551929","otp_code":"934313"}
+{"time":"2025-09-09T22:34:36.2880487+03:30","level":"INFO","msg":"OTP generation requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:34:36.2880487+03:30","level":"DEBUG","msg":"OTP saved in memory","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:34:36.2880487+03:30","level":"INFO","msg":"OTP code generated successfully","phone_number":"+989196551929","otp_code":"677969"}
+{"time":"2025-09-09T22:34:40.6888658+03:30","level":"INFO","msg":"Shutdown signal received..."}
+{"time":"2025-09-09T22:34:40.6888658+03:30","level":"INFO","msg":"Starting server shutdown process..."}
+{"time":"2025-09-09T22:34:40.6888658+03:30","level":"INFO","msg":"Starting graceful shutdown for HTTP server","port":8080}
+{"time":"2025-09-09T22:34:40.6896459+03:30","level":"INFO","msg":"HTTP server stopped","host":"","port":8080}
+{"time":"2025-09-09T22:34:40.6896459+03:30","level":"INFO","msg":"HTTP server shutdown successfully"}
+{"time":"2025-09-09T22:34:40.690183+03:30","level":"INFO","msg":"All servers have been shutdown successfully."}
+{"time":"2025-09-09T22:34:40.690281+03:30","level":"INFO","msg":"Servers shutdown gracefully"}
+{"time":"2025-09-09T22:34:40.690281+03:30","level":"INFO","msg":"Auth Application stopped"}
+{"time":"2025-09-09T22:34:40.690281+03:30","level":"INFO","msg":"Auth service started"}
+{"time":"2025-09-09T22:34:43.939957+03:30","level":"INFO","msg":"Running migrations up..."}
+{"time":"2025-09-09T22:34:43.9612213+03:30","level":"INFO","msg":"Migrations up completed."}
+{"time":"2025-09-09T22:34:43.9612213+03:30","level":"INFO","msg":"Starting Auth Service..."}
+{"time":"2025-09-09T22:34:43.9866719+03:30","level":"INFO","msg":"Auth application started."}
+{"time":"2025-09-09T22:34:43.9871936+03:30","level":"INFO","msg":"HTTP server starting...","host":"","port":8080}
+{"time":"2025-09-09T22:34:51.0963267+03:30","level":"INFO","msg":"OTP generation requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:34:51.0963838+03:30","level":"DEBUG","msg":"OTP saved in memory","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:34:51.0963838+03:30","level":"INFO","msg":"OTP code generated successfully","phone_number":"+989196551929","otp_code":"532303"}
+{"time":"2025-09-09T22:35:05.3215818+03:30","level":"INFO","msg":"Login verification requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:35:05.322166+03:30","level":"DEBUG","msg":"OTP found successfully","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:35:05.322166+03:30","level":"INFO","msg":"OTP verified successfully, checking user status","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:35:05.322166+03:30","level":"INFO","msg":"Finding user by phone number in database","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:35:05.3524113+03:30","level":"WARN","msg":"User not found in database","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:35:05.3525104+03:30","level":"INFO","msg":"User not found, proceeding with registration","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:35:05.3525359+03:30","level":"INFO","msg":"Creating a new user in the database","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:35:05.3702091+03:30","level":"DEBUG","msg":"User created successfully","phone_number":"+989196551929","user_id":1}
+{"time":"2025-09-09T22:35:05.3702091+03:30","level":"DEBUG","msg":"JWT token generated for user","phone_number":"+989196551929","user_id":1}
+{"time":"2025-09-09T22:35:16.4392232+03:30","level":"INFO","msg":"Shutdown signal received..."}
+{"time":"2025-09-09T22:35:16.4392232+03:30","level":"INFO","msg":"Starting server shutdown process..."}
+{"time":"2025-09-09T22:35:16.4392232+03:30","level":"INFO","msg":"Starting graceful shutdown for HTTP server","port":8080}
+{"time":"2025-09-09T22:35:16.4398032+03:30","level":"INFO","msg":"HTTP server stopped","host":"","port":8080}
+{"time":"2025-09-09T22:35:16.4398032+03:30","level":"INFO","msg":"HTTP server shutdown successfully"}
+{"time":"2025-09-09T22:35:16.4398032+03:30","level":"INFO","msg":"All servers have been shutdown successfully."}
+{"time":"2025-09-09T22:35:16.4398032+03:30","level":"INFO","msg":"Servers shutdown gracefully"}
+{"time":"2025-09-09T22:35:16.4398032+03:30","level":"INFO","msg":"Auth Application stopped"}
+{"time":"2025-09-09T22:35:16.4398032+03:30","level":"INFO","msg":"Auth service started"}
+{"time":"2025-09-09T22:35:22.1318625+03:30","level":"INFO","msg":"Running migrations up..."}
+{"time":"2025-09-09T22:35:22.155222+03:30","level":"INFO","msg":"Migrations up completed."}
+{"time":"2025-09-09T22:35:22.155222+03:30","level":"INFO","msg":"Starting Auth Service..."}
+{"time":"2025-09-09T22:35:22.1871466+03:30","level":"INFO","msg":"Auth application started."}
+{"time":"2025-09-09T22:35:22.1871466+03:30","level":"INFO","msg":"HTTP server starting...","host":"","port":8080}
+{"time":"2025-09-09T22:35:25.8898879+03:30","level":"INFO","msg":"Login verification requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:35:25.8898879+03:30","level":"WARN","msg":"OTP not found in store","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:35:25.8898879+03:30","level":"WARN","msg":"Failed to find OTP","phone_number":"+989196551929","error":"otp not found or expired"}
+{"time":"2025-09-09T22:35:32.2235452+03:30","level":"INFO","msg":"OTP generation requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:35:32.2235452+03:30","level":"DEBUG","msg":"OTP saved in memory","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:35:32.2235452+03:30","level":"INFO","msg":"OTP code generated successfully","phone_number":"+989196551929","otp_code":"204041"}
+{"time":"2025-09-09T22:35:44.7895979+03:30","level":"INFO","msg":"Login verification requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:35:44.7895979+03:30","level":"DEBUG","msg":"OTP found successfully","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:35:44.7895979+03:30","level":"INFO","msg":"OTP verified successfully, checking user status","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:35:44.7895979+03:30","level":"INFO","msg":"Finding user by phone number in database","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:35:44.8052101+03:30","level":"DEBUG","msg":"User found successfully","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:35:44.8052101+03:30","level":"DEBUG","msg":"Existing user found","phone_number":"+989196551929","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:35:44.8052101+03:30","level":"DEBUG","msg":"JWT token generated for user","phone_number":"+989196551929","user_id":1}
+{"time":"2025-09-09T22:35:53.8424431+03:30","level":"INFO","msg":"Shutdown signal received..."}
+{"time":"2025-09-09T22:35:53.8424431+03:30","level":"INFO","msg":"Starting server shutdown process..."}
+{"time":"2025-09-09T22:35:53.8429609+03:30","level":"INFO","msg":"Starting graceful shutdown for HTTP server","port":8080}
+{"time":"2025-09-09T22:35:53.8432042+03:30","level":"INFO","msg":"HTTP server stopped","host":"","port":8080}
+{"time":"2025-09-09T22:35:53.8440352+03:30","level":"INFO","msg":"HTTP server shutdown successfully"}
+{"time":"2025-09-09T22:35:53.8440352+03:30","level":"INFO","msg":"All servers have been shutdown successfully."}
+{"time":"2025-09-09T22:35:53.8440352+03:30","level":"INFO","msg":"Servers shutdown gracefully"}
+{"time":"2025-09-09T22:35:53.8440352+03:30","level":"INFO","msg":"Auth Application stopped"}
+{"time":"2025-09-09T22:35:53.8440352+03:30","level":"INFO","msg":"Auth service started"}
+{"time":"2025-09-09T22:38:48.3219589+03:30","level":"INFO","msg":"Running migrations up..."}
+{"time":"2025-09-09T22:38:48.3441381+03:30","level":"INFO","msg":"Migrations up completed."}
+{"time":"2025-09-09T22:38:48.3441381+03:30","level":"INFO","msg":"Starting Auth Service..."}
+{"time":"2025-09-09T22:38:48.3698646+03:30","level":"INFO","msg":"Auth application started."}
+{"time":"2025-09-09T22:38:48.3698646+03:30","level":"INFO","msg":"HTTP server starting...","host":"","port":8080}
+{"time":"2025-09-09T22:38:55.974123+03:30","level":"INFO","msg":"Login verification requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:38:55.9746972+03:30","level":"WARN","msg":"OTP not found in store","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:38:55.9746972+03:30","level":"WARN","msg":"Failed to find OTP","phone_number":"+989196551929","error":"otp not found or expired"}
+{"time":"2025-09-09T22:38:59.0268803+03:30","level":"INFO","msg":"OTP generation requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:38:59.0268803+03:30","level":"DEBUG","msg":"OTP saved in memory","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:38:59.0268803+03:30","level":"INFO","msg":"OTP code generated successfully","phone_number":"+989196551929","otp_code":"499561"}
+{"time":"2025-09-09T22:38:59.6984318+03:30","level":"INFO","msg":"OTP generation requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:38:59.6984318+03:30","level":"DEBUG","msg":"OTP saved in memory","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:38:59.6984318+03:30","level":"INFO","msg":"OTP code generated successfully","phone_number":"+989196551929","otp_code":"946601"}
+{"time":"2025-09-09T22:39:00.3360211+03:30","level":"INFO","msg":"OTP generation requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:39:00.3360211+03:30","level":"DEBUG","msg":"OTP saved in memory","phone_number":"+989196551929"}
+{"time":"2025-09-09T22:39:00.3360211+03:30","level":"INFO","msg":"OTP code generated successfully","phone_number":"+989196551929","otp_code":"022274"}
+{"time":"2025-09-09T22:39:04.712808+03:30","level":"INFO","msg":"Shutdown signal received..."}
+{"time":"2025-09-09T22:39:04.7133296+03:30","level":"INFO","msg":"Starting server shutdown process..."}
+{"time":"2025-09-09T22:39:04.7135551+03:30","level":"INFO","msg":"Starting graceful shutdown for HTTP server","port":8080}
+{"time":"2025-09-09T22:39:04.7137205+03:30","level":"INFO","msg":"HTTP server stopped","host":"","port":8080}
+{"time":"2025-09-09T22:39:04.7143641+03:30","level":"INFO","msg":"HTTP server shutdown successfully"}
+{"time":"2025-09-09T22:39:04.7147264+03:30","level":"INFO","msg":"All servers have been shutdown successfully."}
+{"time":"2025-09-09T22:39:04.7147264+03:30","level":"INFO","msg":"Servers shutdown gracefully"}
+{"time":"2025-09-09T22:39:04.7149644+03:30","level":"INFO","msg":"Auth Application stopped"}
+{"time":"2025-09-09T22:39:04.7150094+03:30","level":"INFO","msg":"Auth service started"}
+{"time":"2025-09-09T23:15:04.5928713+03:30","level":"INFO","msg":"Running migrations up..."}
+{"time":"2025-09-09T23:15:04.681165+03:30","level":"INFO","msg":"Migrations up completed."}
+{"time":"2025-09-09T23:15:04.681165+03:30","level":"INFO","msg":"Starting Auth Service..."}
+{"time":"2025-09-09T23:15:04.7380459+03:30","level":"INFO","msg":"Auth application started."}
+{"time":"2025-09-09T23:15:04.7380459+03:30","level":"INFO","msg":"HTTP server starting...","host":"","port":8080}
+{"time":"2025-09-09T23:15:18.0288398+03:30","level":"INFO","msg":"OTP generation requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T23:15:18.0288398+03:30","level":"DEBUG","msg":"OTP saved in memory","phone_number":"+989196551929"}
+{"time":"2025-09-09T23:15:18.0288398+03:30","level":"INFO","msg":"OTP code generated successfully","phone_number":"+989196551929","otp_code":"204390"}
+{"time":"2025-09-09T23:15:36.4658763+03:30","level":"INFO","msg":"Login verification requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T23:15:36.4658763+03:30","level":"DEBUG","msg":"OTP found successfully","phone_number":"+989196551929"}
+{"time":"2025-09-09T23:15:36.4658763+03:30","level":"INFO","msg":"OTP verified successfully, checking user status","phone_number":"+989196551929"}
+{"time":"2025-09-09T23:15:36.4658763+03:30","level":"INFO","msg":"Finding user by phone number in database","phone_number":"+989196551929"}
+{"time":"2025-09-09T23:15:36.4929619+03:30","level":"DEBUG","msg":"User found successfully","phone_number":"+989196551929"}
+{"time":"2025-09-09T23:15:36.4930165+03:30","level":"DEBUG","msg":"Existing user found","phone_number":"+989196551929","phone_number":"+989196551929"}
+{"time":"2025-09-09T23:15:36.4930165+03:30","level":"DEBUG","msg":"JWT token generated for user","phone_number":"+989196551929","user_id":1}
+{"time":"2025-09-09T23:17:51.5018222+03:30","level":"INFO","msg":"ListUsers service method called","request":{"Page":0,"PageSize":0,"Search":""}}
+{"time":"2025-09-09T23:17:51.5023738+03:30","level":"INFO","msg":"Listing users from database","params":{"Page":1,"PageSize":10,"Search":""}}
+{"time":"2025-09-09T23:17:51.539499+03:30","level":"DEBUG","msg":"Users listed successfully","params":{"Page":1,"PageSize":10,"Search":""},"count":1,"total":1}
+{"time":"2025-09-09T23:18:04.7385116+03:30","level":"DEBUG","msg":"Cleaned up expired OTPs","count":1}
+{"time":"2025-09-09T23:18:28.0554693+03:30","level":"INFO","msg":"GetUser service method called","user_id":1}
+{"time":"2025-09-09T23:18:28.0554693+03:30","level":"INFO","msg":"Finding user by ID in database","user_id":1}
+{"time":"2025-09-09T23:18:28.0641501+03:30","level":"DEBUG","msg":"User found successfully by ID","user_id":1}
+{"time":"2025-09-09T23:30:10.8071764+03:30","level":"INFO","msg":"Shutdown signal received..."}
+{"time":"2025-09-09T23:30:10.8071764+03:30","level":"INFO","msg":"Starting server shutdown process..."}
+{"time":"2025-09-09T23:30:10.8071764+03:30","level":"INFO","msg":"Starting graceful shutdown for HTTP server","port":8080}
+{"time":"2025-09-09T23:30:10.8071764+03:30","level":"INFO","msg":"HTTP server stopped","host":"","port":8080}
+{"time":"2025-09-09T23:30:10.8077414+03:30","level":"INFO","msg":"HTTP server shutdown successfully"}
+{"time":"2025-09-09T23:30:10.8077414+03:30","level":"INFO","msg":"All servers have been shutdown successfully."}
+{"time":"2025-09-09T23:30:10.8077414+03:30","level":"INFO","msg":"Servers shutdown gracefully"}
+{"time":"2025-09-09T23:30:10.8077414+03:30","level":"INFO","msg":"Auth Application stopped"}
+{"time":"2025-09-09T23:30:10.8077414+03:30","level":"INFO","msg":"Auth service started"}
+{"time":"2025-09-09T23:30:30.998663+03:30","level":"INFO","msg":"Running migrations up..."}
+{"time":"2025-09-09T23:30:31.0248423+03:30","level":"INFO","msg":"Migrations up completed."}
+{"time":"2025-09-09T23:30:31.0248423+03:30","level":"INFO","msg":"Starting Auth Service..."}
+{"time":"2025-09-09T23:30:31.0593513+03:30","level":"INFO","msg":"Auth application started."}
+{"time":"2025-09-09T23:30:31.0593513+03:30","level":"INFO","msg":"HTTP server starting...","host":"","port":8080}
+{"time":"2025-09-09T23:30:57.7505259+03:30","level":"INFO","msg":"Shutdown signal received..."}
+{"time":"2025-09-09T23:30:57.7505259+03:30","level":"INFO","msg":"Starting server shutdown process..."}
+{"time":"2025-09-09T23:30:57.7505259+03:30","level":"INFO","msg":"Starting graceful shutdown for HTTP server","port":8080}
+{"time":"2025-09-09T23:30:57.7510828+03:30","level":"INFO","msg":"HTTP server stopped","host":"","port":8080}
+{"time":"2025-09-09T23:30:57.7510828+03:30","level":"INFO","msg":"HTTP server shutdown successfully"}
+{"time":"2025-09-09T23:30:57.7510828+03:30","level":"INFO","msg":"All servers have been shutdown successfully."}
+{"time":"2025-09-09T23:30:57.7510828+03:30","level":"INFO","msg":"Servers shutdown gracefully"}
+{"time":"2025-09-09T23:30:57.7510828+03:30","level":"INFO","msg":"Auth Application stopped"}
+{"time":"2025-09-09T23:30:57.7510828+03:30","level":"INFO","msg":"Auth service started"}
+{"time":"2025-09-09T23:44:58.1104828+03:30","level":"INFO","msg":"Running migrations up..."}
+{"time":"2025-09-09T23:44:58.1348499+03:30","level":"INFO","msg":"Migrations up completed."}
+{"time":"2025-09-09T23:44:58.1348499+03:30","level":"INFO","msg":"Starting Auth Service..."}
+{"time":"2025-09-09T23:44:58.1629898+03:30","level":"INFO","msg":"Auth application started."}
+{"time":"2025-09-09T23:44:58.1635082+03:30","level":"INFO","msg":"HTTP server starting...","host":"","port":8080}
+{"time":"2025-09-09T23:46:32.1740623+03:30","level":"INFO","msg":"Shutdown signal received..."}
+{"time":"2025-09-09T23:46:32.1740623+03:30","level":"INFO","msg":"Starting server shutdown process..."}
+{"time":"2025-09-09T23:46:32.1740623+03:30","level":"INFO","msg":"Starting graceful shutdown for HTTP server","port":8080}
+{"time":"2025-09-09T23:46:32.1746152+03:30","level":"INFO","msg":"HTTP server stopped","host":"","port":8080}
+{"time":"2025-09-09T23:46:32.1746152+03:30","level":"INFO","msg":"HTTP server shutdown successfully"}
+{"time":"2025-09-09T23:46:32.1746152+03:30","level":"INFO","msg":"All servers have been shutdown successfully."}
+{"time":"2025-09-09T23:46:32.1746152+03:30","level":"INFO","msg":"Servers shutdown gracefully"}
+{"time":"2025-09-09T23:46:32.1746152+03:30","level":"INFO","msg":"Auth Application stopped"}
+{"time":"2025-09-09T23:46:32.1746152+03:30","level":"INFO","msg":"Auth service started"}
+{"time":"2025-09-09T23:52:00.0557993+03:30","level":"INFO","msg":"Running migrations up..."}
+{"time":"2025-09-09T23:52:00.0768228+03:30","level":"INFO","msg":"Migrations up completed."}
+{"time":"2025-09-09T23:52:00.0768228+03:30","level":"INFO","msg":"Starting Auth Service..."}
+{"time":"2025-09-09T23:52:00.1018202+03:30","level":"INFO","msg":"Auth application started."}
+{"time":"2025-09-09T23:52:00.1018202+03:30","level":"INFO","msg":"HTTP server starting...","host":"","port":8080}
+{"time":"2025-09-09T23:52:07.7497003+03:30","level":"INFO","msg":"OTP generation requested","phone_number":"+989196551929"}
+{"time":"2025-09-09T23:52:07.7497003+03:30","level":"DEBUG","msg":"OTP saved in memory","phone_number":"+989196551929"}
+{"time":"2025-09-09T23:52:07.7497003+03:30","level":"INFO","msg":"OTP code generated successfully","phone_number":"+989196551929","otp_code":"626249"}
+{"time":"2025-09-09T23:55:00.1026762+03:30","level":"DEBUG","msg":"Cleaned up expired OTPs","count":1}
+{"time":"2025-09-09T23:56:23.6157107+03:30","level":"INFO","msg":"Shutdown signal received..."}
+{"time":"2025-09-09T23:56:23.6157107+03:30","level":"INFO","msg":"Starting server shutdown process..."}
+{"time":"2025-09-09T23:56:23.6157107+03:30","level":"INFO","msg":"Starting graceful shutdown for HTTP server","port":8080}
+{"time":"2025-09-09T23:56:23.6157107+03:30","level":"INFO","msg":"HTTP server stopped","host":"","port":8080}
+{"time":"2025-09-09T23:56:23.6259105+03:30","level":"INFO","msg":"HTTP server shutdown successfully"}
+{"time":"2025-09-09T23:56:23.6259105+03:30","level":"INFO","msg":"All servers have been shutdown successfully."}
+{"time":"2025-09-09T23:56:23.6259105+03:30","level":"INFO","msg":"Servers shutdown gracefully"}
+{"time":"2025-09-09T23:56:23.6259105+03:30","level":"INFO","msg":"Auth Application stopped"}
+{"time":"2025-09-09T23:56:23.6259105+03:30","level":"INFO","msg":"Auth service started"}
+{"time":"2025-09-10T02:01:16.561901+03:30","level":"INFO","msg":"Auth application started."}
+{"time":"2025-09-10T02:01:16.561901+03:30","level":"INFO","msg":"HTTP server starting...","host":"","port":8080}
+{"time":"2025-09-10T02:01:34.2412286+03:30","level":"INFO","msg":"Shutdown signal received..."}
+{"time":"2025-09-10T02:01:34.2412286+03:30","level":"INFO","msg":"Starting server shutdown process..."}
+{"time":"2025-09-10T02:01:34.2412286+03:30","level":"INFO","msg":"Starting graceful shutdown for HTTP server","port":8080}
+{"time":"2025-09-10T02:01:34.2412286+03:30","level":"INFO","msg":"HTTP server stopped","host":"","port":8080}
+{"time":"2025-09-10T02:01:34.2417779+03:30","level":"INFO","msg":"HTTP server shutdown successfully"}
+{"time":"2025-09-10T02:01:34.2417779+03:30","level":"INFO","msg":"All servers have been shutdown successfully."}
+{"time":"2025-09-10T02:01:34.2417779+03:30","level":"INFO","msg":"Servers shutdown gracefully"}
+{"time":"2025-09-10T02:01:34.2417779+03:30","level":"INFO","msg":"Auth Application stopped"}

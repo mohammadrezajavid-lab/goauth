@@ -17,9 +17,9 @@ for protected endpoints, and is fully containerized for easy setup and deploymen
 2. **Configuration:**
 
     * The main configuration file is `config.yml` located at `deploy/goauth/development/config.yml`.
-    * It includes settings for the HTTP server, PostgreSQL database, JWT, and logger.
+    * It includes settings for the HTTP server, PostgreSQL database, JWT, Rate limiter and logger.
     * You can override configurations using environment variables with the prefix `AUTH_`. For example,
-      `postgres.password` in YAML becomes `AUTH_POSTGRES_PASSWORD` as an environment variable.
+      `postgres_dp.password` in YAML becomes `AUTH__POSTGRES_DB__PASSWORD` as an environment variable.
 
 3. **Install Go Dependencies:**
 

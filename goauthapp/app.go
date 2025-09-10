@@ -3,7 +3,6 @@ package goauthapp
 import (
 	"context"
 	"errors"
-	"fmt"
 	authHTTP "github.com/mohammadrezajavid-lab/goauth/goauthapp/delivery/http"
 	"github.com/mohammadrezajavid-lab/goauth/goauthapp/delivery/http/middleware"
 	userRepository "github.com/mohammadrezajavid-lab/goauth/goauthapp/repository/database"

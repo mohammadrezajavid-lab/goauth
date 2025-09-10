@@ -8,7 +8,7 @@ rate_limiter:
   window: 10m # 10 minute
 
 jwt:
-  secret_key: "secret_keydddddddddddddddddddddddddddddd"
+  secret_key: "k9wXpS4vY7zB3aNfH6jL1mC5tG8vY3bJ2rD9gU4kP7wE1sF6hR2qI0oV5xZ3"
   expiration_time: 60m
 
 postgres_db:

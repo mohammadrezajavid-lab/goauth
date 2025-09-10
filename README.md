@@ -19,12 +19,20 @@ for protected endpoints, and is fully containerized for easy setup and deploymen
     * The main configuration file is `config.yml` located at `deploy/goauth/development/config.yml`.
     * It includes settings for the HTTP server, PostgreSQL database, JWT, Rate limiter and logger.
     * You can override configurations using environment variables with the prefix `AUTH_`. For example,
-      `postgres_dp.password` in YAML becomes `AUTH__POSTGRES_DB__PASSWORD` as an environment variable.
+      `postgres_db.password` in YAML becomes `AUTH_POSTGRES_DB__PASSWORD` as an environment variable.
 
 3. **Install Go Dependencies:**
 
    ```bash
    go mod tidy
+   ```
+
+4. **Make Scripts Executable (First-Time Setup):**
+   Before using the `Makefile`, you need to give the management script execution permissions. This command only needs to
+   be run once.
+
+   ```bash
+   chmod +x ./deploy/goauth/development/service.sh
    ```
 
 ### Development Workflow with Makefile
@@ -233,7 +241,7 @@ These endpoints require a valid JWT token in the `Authorization: Bearer <token>`
 - **Database**: PostgreSQL
 - **DB Driver**: pgx
 - **Migrations**: sql-migrate
-- **Configuration**: koanft
+- **Configuration**: koanf
 - **Validation**: ozzo-validation
 - **Containerization**: Docker, Docker Compose
 - **API Documentation**: Swaggo

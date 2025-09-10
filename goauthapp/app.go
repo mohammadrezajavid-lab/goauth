@@ -3,6 +3,7 @@ package goauthapp
 import (
 	"context"
 	"errors"
+	"fmt"
 	authHTTP "github.com/mohammadrezajavid-lab/goauth/goauthapp/delivery/http"
 	"github.com/mohammadrezajavid-lab/goauth/goauthapp/delivery/http/middleware"
 	userRepository "github.com/mohammadrezajavid-lab/goauth/goauthapp/repository/database"
@@ -37,7 +38,7 @@ func Setup(config Config, postgresConn *database.Database) *Application {
 		panic(hErr)
 	}
 
-	otpRepo := otpRepository.NewOtpRepository()
+	otpRepo := otpRepository.NewGoCacheOTPRepository(config.OTPCache)
 	userRepo := userRepository.NewUserRepository(postgresConn.Pool)
 	tokenManager, jErr := token.NewJWTMaker(config.JWT)
 	if jErr != nil {

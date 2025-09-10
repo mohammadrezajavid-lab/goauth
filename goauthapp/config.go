@@ -2,6 +2,7 @@ package goauthapp
 
 import (
 	"github.com/mohammadrezajavid-lab/goauth/goauthapp/delivery/http/middleware"
+	"github.com/mohammadrezajavid-lab/goauth/goauthapp/repository/memory"
 	"github.com/mohammadrezajavid-lab/goauth/pkg/database"
 	"github.com/mohammadrezajavid-lab/goauth/pkg/httpserver"
 	"github.com/mohammadrezajavid-lab/goauth/pkg/logger"
@@ -10,11 +11,12 @@ import (
 )
 
 type Config struct {
-	HTTPServer           httpserver.Config `koanf:"http_server"`
-	RateLimiter          middleware.Config `koanf:"rate_limiter"`
-	JWT                  token.Config      `koanf:"jwt"`
-	PostgresDB           database.Config   `koanf:"postgres_db"`
-	Logger               logger.Config     `koanf:"logger"`
-	TotalShutdownTimeout time.Duration     `koanf:"total_shutdown_timeout"`
-	PathOfMigration      string            `koanf:"path_of_migration"`
+	HTTPServer           httpserver.Config     `koanf:"http_server"`
+	RateLimiter          middleware.Config     `koanf:"rate_limiter"`
+	OTPCache             memory.OTPCacheConfig `koanf:"otp_cache"`
+	JWT                  token.Config          `koanf:"jwt"`
+	PostgresDB           database.Config       `koanf:"postgres_db"`
+	Logger               logger.Config         `koanf:"logger"`
+	TotalShutdownTimeout time.Duration         `koanf:"total_shutdown_timeout"`
+	PathOfMigration      string                `koanf:"path_of_migration"`
 }

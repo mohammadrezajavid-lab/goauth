@@ -7,6 +7,10 @@ rate_limiter:
   limit: 3
   window: 10m # 10 minute
 
+otp_cache:
+  expiration: 2m
+  cleanup_interval: 1m
+
 jwt:
   secret_key: "k9wXpS4vY7zB3aNfH6jL1mC5tG8vY3bJ2rD9gU4kP7wE1sF6hR2qI0oV5xZ3"
   expiration_time: 60m

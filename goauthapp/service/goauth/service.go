@@ -11,6 +11,8 @@ import (
 	"math"
 )
 
+// --- Repository Interfaces (Contracts) ---
+
 type ListUsersParams struct {
 	Page     int
 	PageSize int
@@ -28,6 +30,8 @@ type OTPRepository interface {
 	Save(ctx context.Context, phoneNumber, otp string) error
 	Find(ctx context.Context, phoneNumber string) (string, error)
 }
+
+// --- Service Implementation ---
 
 // Service handles the business logic for authentication.
 type Service struct {
@@ -105,7 +109,6 @@ func (s *Service) VerifyAndLogin(ctx context.Context, request *VerifyOTPRequest)
 		log.Debug("Existing user found", slog.String("phone_number", user.PhoneNumber))
 	}
 
-	// CreateToken
 	accessToken, err := s.tokenMaker.CreateToken(user.ID)
 	if err != nil {
 		log.Error("Failed to create access token", slog.String("error", err.Error()))
@@ -122,7 +125,6 @@ func (s *Service) VerifyAndLogin(ctx context.Context, request *VerifyOTPRequest)
 
 // --- User Management Methods ---
 
-// GetUser retrieves a single user by their ID.
 func (s *Service) GetUser(ctx context.Context, request *GetUserRequest) (*User, error) {
 	log := logger.L().With(slog.Int64("user_id", request.ID))
 	log.Info("GetUser service method called")
@@ -130,24 +132,21 @@ func (s *Service) GetUser(ctx context.Context, request *GetUserRequest) (*User, 
 	user, err := s.userRepo.FindByID(ctx, request.ID)
 	if err != nil {
 		log.Warn("Failed to get user by ID", slog.String("error", err.Error()))
-		// The repository already returns a clear ErrUserNotFound, so we just pass it up.
 		return nil, err
 	}
 
 	return user, nil
 }
 
-// ListUsers retrieves a paginated list of users.
 func (s *Service) ListUsers(ctx context.Context, request *ListUsersRequest) (*ListUsersResponse, error) {
 	log := logger.L().With(slog.Any("request", request))
 	log.Info("ListUsers service method called")
 
-	// Set default values for pagination
 	if request.Page <= 0 {
 		request.Page = 1
 	}
 	if request.PageSize <= 0 {
-		request.PageSize = 10 // A sensible default
+		request.PageSize = 10
 	}
 
 	params := ListUsersParams{
@@ -159,10 +158,9 @@ func (s *Service) ListUsers(ctx context.Context, request *ListUsersRequest) (*Li
 	users, totalRecords, err := s.userRepo.List(ctx, params)
 	if err != nil {
 		log.Error("Failed to list users from repository", slog.String("error", err.Error()))
-		return nil, ErrInternalService // Return a generic internal error
+		return nil, ErrInternalService
 	}
 
-	// Calculate pagination metadata
 	totalPages := 0
 	if totalRecords > 0 {
 		totalPages = int(math.Ceil(float64(totalRecords) / float64(request.PageSize)))

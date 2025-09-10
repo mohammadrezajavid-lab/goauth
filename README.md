@@ -229,10 +229,11 @@ These endpoints require a valid JWT token in the `Authorization: Bearer <token>`
   support for data integrity through constraints (like `UNIQUE` for phone numbers). Its rich feature set and excellent
   performance make it a standard choice for production-ready applications.
 
-- **In-Memory Store (for OTPs)**: OTP data is temporary and high-traffic. Using a simple, concurrent in-memory map is
-  significantly faster than writing to a disk-based database. This approach reduces latency and minimizes unnecessary
-  load on the primary PostgreSQL database. For a multi-node deployment, this could be easily swapped with a distributed
-  cache like Redis.
+- **In-Memory Store (for OTPs)**: OTP data is temporary and high-traffic. To handle this efficiently, we use the popular
+  **`patrickmn/go-cache`** library. This choice avoids the complexities of a manual in-memory implementation (like
+  managing mutexes and cleanup routines). By using a battle-tested library, we ensure a reliable, thread-safe cache with
+  automatic expiration, which reduces latency and minimizes unnecessary load on the primary database. For a multi-node
+  deployment, this can be easily swapped with a distributed cache like Redis.
 
 ### Technology Stack
 
@@ -241,7 +242,8 @@ These endpoints require a valid JWT token in the `Authorization: Bearer <token>`
 - **Database**: PostgreSQL
 - **DB Driver**: pgx
 - **Migrations**: sql-migrate
-- **Configuration**: koanf
+- **In-Memory Cache**: go-cache
+- **Configuration**: koanft
 - **Validation**: ozzo-validation
 - **Containerization**: Docker, Docker Compose
 - **API Documentation**: Swaggo

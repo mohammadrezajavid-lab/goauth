@@ -8,21 +8,21 @@ for protected endpoints, and is fully containerized for easy setup and deploymen
 ### Installation & Setup
 
 1. **Clone the repository:**
-
    ```bash
-   git clone https://github.com/mohammadrezajavid-lab/goauth.git
+   git clone [https://github.com/mohammadrezajavid-lab/goauth.git](https://github.com/mohammadrezajavid-lab/goauth.git)
    cd goauth
    ```
 
 2. **Configuration:**
-
     * The main configuration file is `config.yml` located at `deploy/goauth/development/config.yml`.
-    * It includes settings for the HTTP server, PostgreSQL database, JWT, Rate limiter and logger.
+    * A `.env` file in the same directory is used by Docker Compose to set up the database credentials.
     * You can override configurations using environment variables with the prefix `AUTH_`. For example,
       `postgres_db.password` in YAML becomes `AUTH_POSTGRES_DB__PASSWORD` as an environment variable.
+    * **Important:** For local development (`make run`), the Go application reads credentials directly from
+      `config.yml`. Ensure that the database credentials in your `config.yml` match the `POSTGRES_USER` and
+      `POSTGRES_PASSWORD` values in your `.env` file to ensure consistent connectivity.
 
 3. **Install Go Dependencies:**
-
    ```bash
    go mod tidy
    ```
@@ -30,7 +30,6 @@ for protected endpoints, and is fully containerized for easy setup and deploymen
 4. **Make Scripts Executable (First-Time Setup):**
    Before using the `Makefile`, you need to give the management script execution permissions. This command only needs to
    be run once.
-
    ```bash
    chmod +x ./deploy/goauth/development/service.sh
    ```
@@ -40,9 +39,9 @@ for protected endpoints, and is fully containerized for easy setup and deploymen
 This project uses a `Makefile` as the single entry point for all common development tasks.
 
 * To see a full list of available commands, run:
-  ```bash
-  make help
-  ```
+    ```bash
+    make help
+    ```
 
 #### Running with Docker (Recommended)
 
@@ -50,30 +49,26 @@ This is the simplest way to run the entire application stack.
 
 * **Build and Start the Application:**
   This command builds the Go application, starts the PostgreSQL container, and runs database migrations automatically.
-
-  ```bash
-  make up
-  ```
+    ```bash
+    make up
+    ```
 
 * **Follow Logs:**
-
-  ```bash
-  make logs
-  ```
+    ```bash
+    make logs
+    ```
 
 * **Stop the Application:**
   This stops the running containers without deleting any data.
-
-  ```bash
-  make stop
-  ```
+    ```bash
+    make stop
+    ```
 
 * **Tear Down Everything:**
   This stops and removes all containers, networks, and data volumes.
-
-  ```bash
-  make down
-  ```
+    ```bash
+    make down
+    ```
 
 #### Running Locally (for Go Development)
 
@@ -82,14 +77,12 @@ debugging.
 
 1. **Start the Database:**
    First, start only the PostgreSQL database using Docker.
-
    ```bash
-   make up-db
+   make db-up
    ```
 
 2. **Run the Go Service:**
    This command starts the main application server locally and automatically applies any pending database migrations.
-
    ```bash
    make run
    ```
@@ -103,67 +96,61 @@ The API is documented using Swagger. Once the server is running, you can access 
 
 Below are detailed examples for each endpoint.
 
------
+---
 
 #### **Authentication Endpoints (Public)**
 
 These endpoints are used for user login and registration.
 
 * **`POST /v1/auth/generateotp`**: Initiates the login/registration process by generating an OTP.
-
     * **Rate Limit**: 3 requests per phone number every 10 minutes.
 
   **cURL Example:**
-
-  ```bash
-  curl -X POST http://localhost:8080/v1/auth/generateotp \
-  -H "Content-Type: application/json" \
-  -d '{
-      "phone_number": "+989123456789"
-  }'
-  ```
+    ```bash
+    curl -X POST http://localhost:8080/v1/auth/generateotp \
+    -H "Content-Type: application/json" \
+    -d '{
+        "phone_number": "+989123456789"
+    }'
+    ```
 
   **How to get the OTP Code:**
   For testing purposes, the generated OTP is not sent via SMS. You must check the application's console logs to find the
   code. Look for a log entry similar to this:
-
-  ```json
-  {"time":"2025-09-09T23:52:07.7497003+03:30","level":"INFO","msg":"OTP code generated successfully","phone_number":"+989123456789","otp_code":"626249"}
-  ```
-
+    ```json
+    {"time":"2025-09-10T00:52:07.749Z","level":"INFO","msg":"OTP code generated successfully","phone_number":"+989123456789","otp_code":"626249"}
+    ```
   In this example, the OTP is `626249`.
 
   **Success Response (200 OK):**
-
-  ```json
-  {
-      "message": "OTP code has been generated and printed to the console."
-  }
-  ```
+    ```json
+    {
+        "message": "OTP code has been generated and printed to the console."
+    }
+    ```
 
 * **`POST /v1/auth/verify`**: Verifies the OTP and returns a JWT token.
-  **cURL Example:**
 
-  ```bash
-  # Replace "123456" with the OTP from your console logs
-  curl -X POST http://localhost:8080/v1/auth/verify \
-  -H "Content-Type: application/json" \
-  -d '{
-      "phone_number": "+989123456789",
-      "otp": "123456"
-  }'
-  ```
+  **cURL Example:**
+    ```bash
+    # Replace "123456" with the OTP from your console logs
+    curl -X POST http://localhost:8080/v1/auth/verify \
+    -H "Content-Type: application/json" \
+    -d '{
+        "phone_number": "+989123456789",
+        "otp": "123456"
+    }'
+    ```
 
   **Success Response (200 OK):**
+    ```json
+    {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+        "is_new": true
+    }
+    ```
 
-  ```json
-  {
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
-      "is_new": true
-  }
-  ```
-
------
+---
 
 #### **User Management Endpoints (Protected)**
 
@@ -172,56 +159,51 @@ These endpoints require a valid JWT token in the `Authorization: Bearer <token>`
 * **`GET /v1/users/{id}`**: Retrieves details for a single user by their ID.
 
   **cURL Example:**
-
-  ```bash
-  curl -X GET http://localhost:8080/v1/users/1 \
-  -H "Authorization: Bearer YOUR_JWT_TOKEN"
-  ```
+    ```bash
+    curl -X GET http://localhost:8080/v1/users/1 \
+    -H "Authorization: Bearer YOUR_JWT_TOKEN"
+    ```
 
   **Success Response (200 OK):**
-
-  ```json
-  {
-      "id": 1,
-      "phone_number": "+989123456789",
-      "created_at": "2025-09-09T18:30:00Z",
-      "updated_at": "2025-09-09T18:30:00Z"
-  }
-  ```
+    ```json
+    {
+        "id": 1,
+        "phone_number": "+989123456789",
+        "created_at": "2025-09-10T00:30:00Z",
+        "updated_at": "2025-09-10T00:30:00Z"
+    }
+    ```
 
 * **`GET /v1/users`**: Retrieves a paginated and searchable list of users.
-
     * **Query Parameters**: `page` (int), `pageSize` (int), `search` (string).
 
   **cURL Example (Pagination & Search):**
-
-  ```bash
-  curl -X GET "http://localhost:8080/v1/users?page=1&pageSize=5&search=912" \
-  -H "Authorization: Bearer YOUR_JWT_TOKEN"
-  ```
+    ```bash
+    curl -X GET "http://localhost:8080/v1/users?page=1&pageSize=5&search=912" \
+    -H "Authorization: Bearer YOUR_JWT_TOKEN"
+    ```
 
   **Success Response (200 OK):**
+    ```json
+    {
+        "users": [
+            {
+                "id": 1,
+                "phone_number": "+989121112233",
+                "created_at": "2025-09-10T00:30:00Z",
+                "updated_at": "2025-09-10T00:30:00Z"
+            }
+        ],
+        "metadata": {
+            "currentPage": 1,
+            "pageSize": 5,
+            "totalRecords": 1,
+            "totalPages": 1
+        }
+    }
+    ```
 
-  ```json
-  {
-      "users": [
-          {
-              "id": 1,
-              "phone_number": "+989121112233",
-              "created_at": "2025-09-09T18:30:00Z",
-              "updated_at": "2025-09-09T18:30:00Z"
-          }
-      ],
-      "metadata": {
-          "currentPage": 1,
-          "pageSize": 5,
-          "totalRecords": 1,
-          "totalPages": 1
-      }
-  }
-  ```
-
------
+---
 
 ### Database Choice Justification
 

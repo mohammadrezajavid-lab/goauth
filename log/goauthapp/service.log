@@ -361,3 +361,33 @@
 {"time":"2025-09-10T02:01:34.2417779+03:30","level":"INFO","msg":"All servers have been shutdown successfully."}
 {"time":"2025-09-10T02:01:34.2417779+03:30","level":"INFO","msg":"Servers shutdown gracefully"}
 {"time":"2025-09-10T02:01:34.2417779+03:30","level":"INFO","msg":"Auth Application stopped"}
+{"time":"2025-09-10T09:47:21.4071836+03:30","level":"INFO","msg":"Auth application started."}
+{"time":"2025-09-10T09:47:21.4071836+03:30","level":"INFO","msg":"HTTP server starting...","host":"","port":8080}
+{"time":"2025-09-10T09:47:49.3954578+03:30","level":"INFO","msg":"Shutdown signal received..."}
+{"time":"2025-09-10T09:47:49.3954578+03:30","level":"INFO","msg":"Starting server shutdown process..."}
+{"time":"2025-09-10T09:47:49.3954578+03:30","level":"INFO","msg":"Starting graceful shutdown for HTTP server","port":8080}
+{"time":"2025-09-10T09:47:49.3966952+03:30","level":"INFO","msg":"HTTP server stopped","host":"","port":8080}
+{"time":"2025-09-10T09:47:49.3969443+03:30","level":"INFO","msg":"HTTP server shutdown successfully"}
+{"time":"2025-09-10T09:47:49.3969443+03:30","level":"INFO","msg":"All servers have been shutdown successfully."}
+{"time":"2025-09-10T09:47:49.3969443+03:30","level":"INFO","msg":"Servers shutdown gracefully"}
+{"time":"2025-09-10T09:47:49.3969443+03:30","level":"INFO","msg":"Auth Application stopped"}
+{"time":"2025-09-10T10:24:43.1422512+03:30","level":"INFO","msg":"Auth application started."}
+{"time":"2025-09-10T10:24:43.1422512+03:30","level":"INFO","msg":"HTTP server starting...","host":"","port":8080}
+{"time":"2025-09-10T10:34:08.3444617+03:30","level":"INFO","msg":"Shutdown signal received..."}
+{"time":"2025-09-10T10:34:08.3444617+03:30","level":"INFO","msg":"Starting server shutdown process..."}
+{"time":"2025-09-10T10:34:08.3444617+03:30","level":"INFO","msg":"Starting graceful shutdown for HTTP server","port":8080}
+{"time":"2025-09-10T10:34:08.3450055+03:30","level":"INFO","msg":"HTTP server stopped","host":"","port":8080}
+{"time":"2025-09-10T10:34:08.3450055+03:30","level":"INFO","msg":"HTTP server shutdown successfully"}
+{"time":"2025-09-10T10:34:08.3450055+03:30","level":"INFO","msg":"Servers shutdown gracefully"}
+{"time":"2025-09-10T10:34:08.3450055+03:30","level":"INFO","msg":"All servers have been shutdown successfully."}
+{"time":"2025-09-10T10:34:08.3450055+03:30","level":"INFO","msg":"Auth Application stopped"}
+{"time":"2025-09-10T10:34:18.7111409+03:30","level":"INFO","msg":"Auth application started."}
+{"time":"2025-09-10T10:34:18.7111409+03:30","level":"INFO","msg":"HTTP server starting...","host":"","port":8080}
+{"time":"2025-09-10T10:34:31.1874369+03:30","level":"INFO","msg":"Shutdown signal received..."}
+{"time":"2025-09-10T10:34:31.1874369+03:30","level":"INFO","msg":"Starting server shutdown process..."}
+{"time":"2025-09-10T10:34:31.1874369+03:30","level":"INFO","msg":"Starting graceful shutdown for HTTP server","port":8080}
+{"time":"2025-09-10T10:34:31.1874369+03:30","level":"INFO","msg":"HTTP server stopped","host":"","port":8080}
+{"time":"2025-09-10T10:34:31.1874369+03:30","level":"INFO","msg":"HTTP server shutdown successfully"}
+{"time":"2025-09-10T10:34:31.1879743+03:30","level":"INFO","msg":"All servers have been shutdown successfully."}
+{"time":"2025-09-10T10:34:31.1879743+03:30","level":"INFO","msg":"Servers shutdown gracefully"}
+{"time":"2025-09-10T10:34:31.1879743+03:30","level":"INFO","msg":"Auth Application stopped"}

@@ -9,7 +9,6 @@ services:
       - ../../../deploy/goauth/development/config.yml:/app/config.yml
     environment:
       - CONFIG_PATH=/app/config.yml
-      #`koanf:"postgres_db"` tag.
       - AUTH_POSTGRES_DB__HOST=goauthapp-db
     depends_on:
       goauthapp-db:
@@ -22,14 +21,16 @@ services:
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_USER: auth_admin
-      POSTGRES_PASSWORD: password123
+      # These values are now read from the .env file in this directory
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: auth_db
     restart: always
     volumes:
       - goauthapp-data:/var/lib/postgresql/data
     healthcheck:
-      test: [ "CMD-SHELL", "pg_isready -U auth_admin -d auth_db" ]
+      # The healthcheck also uses the variable for consistency
+      test: [ "CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d auth_db" ]
       interval: 10s
       timeout: 5s
       retries: 5
